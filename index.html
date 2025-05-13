@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yandex music app</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="manifest" href="./manifest.json" />
+  <script src="./scripts/index.js" defer></script>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="header__logo" href="#">
+            <img src="./assets/icons/icon.png" alt="Logo icon" width="100">
+            <img src="./assets/icons/logo.png" alt="Logo icon" width="250">
+          </a>
+          <button class="header__button" id="upload-btn" type="button" aria-label="button to upload mp3">
+            Upload
+            <input class="header__input" type="file" hidden accept=".mp3">
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__design-item"></div>
+            <div class="hero__design-item"></div>
+            <div class="hero__design-item"></div>
+
+            <div class="hero__actions">
+              <button class="hero__action-btn" id="prev-btn" type="button">
+                <img src="./assets/icons/actions/prev.png" alt="prev button">
+              </button>
+              <button class="hero__action-btn" id="play-btn" type="button">
+                <img class="play-img" src="./assets/icons/actions/play.png" alt="play button">
+              </button>
+              <button class="hero__action-btn" id="next-btn" type="button">
+                <img src="./assets/icons/actions/next.png" alt="next button">
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__actions">
+          <button class="footer__action-btn" id="repeat-btn" type="button">
+            <img src="./assets/icons/repeat.png" alt="">
+          </button>
+          <div class="footer__progress">
+            <span class="footer__progress-bar"></span>
+            <span class="footer__progress-percent">0%</span>
+          </div>
+          <button class="footer__action-btn" id="mute-btn" type="button">
+            <img class="mute-img" src="./assets/icons/mute.png" alt="" width="32">
+          </button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+button {
+	color: inherit;
+	background-color: transparent;
+}
+button {
+	background-color: transparent;
+}
+input,
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: bold;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #07010f;
+	color: #ffffff;
+}

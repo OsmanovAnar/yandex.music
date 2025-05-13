@@ -1,0 +1,248 @@
+@import './reset.css';
+/* --------------------------------------------- */
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100svh;
+	& > main {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.container {
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+/* -----Header---------- */
+.header {
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+.header__logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	img {
+		height: auto;
+	}
+}
+
+.header__button {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+	background-color: #4cc713;
+	color: white;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
+	border: none;
+	border-radius: 2em;
+	font-weight: bold;
+}
+
+.header__button:hover {
+	background-color: #1a60a2;
+	color: white;
+}
+
+.header__button:before,
+.header__button:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+.header__button:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+.header__button:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	animation: downloadArrow 1s linear infinite;
+	animation-play-state: paused;
+}
+
+.header__button:hover:before {
+	border-color: #bdd3ef;
+}
+
+.header__button:hover:after {
+	border-top-color: #eff1f7;
+	animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+
+	0.001% {
+		margin-top: -15px;
+		opacity: 0.4;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		margin-top: 0;
+		opacity: 0.4;
+	}
+}
+/* ------------------Hero------------------------------ */
+
+.hero {
+}
+
+.hero__inner {
+	position: relative;
+}
+.hero__design-item {
+	width: 300px;
+	height: 300px;
+	border-radius: 48% 52% 70% 30% / 35% 43% 57% 65%;
+	background-color: blue;
+	filter: blur(20px);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+
+	animation: changeColor 10s infinite ease, morph 10s infinite ease-in-out;
+
+	&:nth-child(2) {
+		animation-delay: 1s;
+	}
+	&:nth-child(3) {
+		animation-delay: 2s;
+	}
+}
+.hero__actions {
+	display: flex;
+	gap: 25px;
+}
+.hero__action-btn {
+	transition: all 0.3s ease;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes changeColor {
+	0%,
+	100% {
+		background-color: blue;
+	}
+	25% {
+		background-color: violet;
+	}
+	50% {
+		background-color: orangered;
+	}
+	75% {
+		background-color: rgb(0, 238, 255);
+	}
+}
+
+@keyframes morph {
+	0%,
+	100% {
+		border-radius: 48% 52% 70% 30% / 35% 43% 57% 65%;
+		transform: translate(-50%, -50%);
+	}
+	25% {
+		border-radius: 23% 77% 70% 30% / 68% 15% 85% 32%;
+		transform: translate(-55%, -55%);
+	}
+	50% {
+		border-radius: 13% 87% 35% 65% / 99% 15% 85% 1%;
+		transform: translate(-45%, -45%);
+	}
+	75% {
+		border-radius: 37% 63% 24% 76% / 49% 65% 35% 51%;
+		transform: translate(-55%, -45%);
+	}
+}
+
+/* ------------------Hero end-------------------------- */
+
+/* ----------------Footer----------------------------- */
+
+.footer {
+	padding: 25px 0;
+}
+
+.footer__actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	max-width: 300px;
+	background-color: #4d4d4d;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 auto;
+	box-shadow: 0 -10px 15px rgb(101, 101, 101);
+}
+.footer__action-btn {
+	border: 1px solid #c3c3c3;
+	border-radius: 10px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	&:hover {
+		transform: scale(1.1);
+		border-color: #fff700;
+	}
+}
+.footer__progress {
+	border: 1px solid #f1f1f1;
+	border-radius: 10px;
+	width: 100px;
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.footer__progress-bar {
+	position: absolute;
+	inset: 0;
+	background-color: red;
+	border-radius: 12px;
+	width: 0;
+}
+.footer__progress-percent {
+}
+
+/* --------------------------------------- */

@@ -1,9 +1,8 @@
 const musicList = [
-	"../assets/audio/1.mp3",
-	"../assets/audio/2.mp3",
-	"../assets/audio/3.mp3",
-	"../assets/audio/4.mp3",
-	"../assets/audio/5.mp3",
+	'../assets/audio/1.mp3',
+	'../assets/audio/Andery Toronto - Glock.mp3',
+	'../assets/audio/Andery Toronto feat. Archi - С Кем Ты Была.mp3',
+	'../assets/audio/Andery Toronto - Криминал.mp3'
 ];
 const elements = {
 	playBtn: document.querySelector("#play-btn"),
@@ -103,4 +102,5 @@ if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('/service-worker.js')
 			.then(reg => console.log('Service Worker registered:', reg))
 			.catch(err => console.error('Service Worker registration failed:', err));
-	})}
+	})
+}

@@ -1,11 +1,12 @@
-@import './reset.css';
+@import "./reset.css";
 /* --------------------------------------------- */
 
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100svh;
-	& > main {
+
+	&>main {
 		flex-grow: 1;
 		display: flex;
 		align-items: center;
@@ -21,8 +22,7 @@
 }
 
 /* -----Header---------- */
-.header {
-}
+.header {}
 
 .header__nav {
 	display: flex;
@@ -30,10 +30,12 @@
 	justify-content: space-between;
 	gap: 10px;
 }
+
 .header__logo {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+
 	img {
 		height: auto;
 	}
@@ -62,7 +64,7 @@
 
 .header__button:before,
 .header__button:after {
-	content: ' ';
+	content: " ";
 	display: block;
 	position: absolute;
 	left: 15px;
@@ -118,14 +120,15 @@
 		opacity: 0.4;
 	}
 }
+
 /* ------------------Hero------------------------------ */
 
-.hero {
-}
+.hero {}
 
 .hero__inner {
 	position: relative;
 }
+
 .hero__design-item {
 	width: 300px;
 	height: 300px;
@@ -143,51 +146,63 @@
 	&:nth-child(2) {
 		animation-delay: 1s;
 	}
+
 	&:nth-child(3) {
 		animation-delay: 2s;
 	}
 }
+
 .hero__actions {
 	display: flex;
 	gap: 25px;
 }
+
 .hero__action-btn {
 	transition: all 0.3s ease;
+
 	&:hover {
 		transform: scale(1.2);
 	}
 }
 
 @keyframes changeColor {
+
 	0%,
 	100% {
 		background-color: blue;
 	}
+
 	25% {
 		background-color: violet;
 	}
+
 	50% {
 		background-color: orangered;
 	}
+
 	75% {
 		background-color: rgb(0, 238, 255);
 	}
 }
 
 @keyframes morph {
+
 	0%,
 	100% {
 		border-radius: 48% 52% 70% 30% / 35% 43% 57% 65%;
 		transform: translate(-50%, -50%);
 	}
+
 	25% {
 		border-radius: 23% 77% 70% 30% / 68% 15% 85% 32%;
 		transform: translate(-55%, -55%);
 	}
+
 	50% {
 		border-radius: 13% 87% 35% 65% / 99% 15% 85% 1%;
 		transform: translate(-45%, -45%);
 	}
+
 	75% {
 		border-radius: 37% 63% 24% 76% / 49% 65% 35% 51%;
 		transform: translate(-55%, -45%);
@@ -214,6 +229,7 @@
 	margin: 0 auto;
 	box-shadow: 0 -10px 15px rgb(101, 101, 101);
 }
+
 .footer__action-btn {
 	border: 1px solid #c3c3c3;
 	border-radius: 10px;
@@ -222,11 +238,13 @@
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s ease;
+
 	&:hover {
 		transform: scale(1.1);
 		border-color: #fff700;
 	}
 }
+
 .footer__progress {
 	border: 1px solid #f1f1f1;
 	border-radius: 10px;
@@ -235,6 +253,7 @@
 	position: relative;
 	overflow: hidden;
 }
+
 .footer__progress-bar {
 	position: absolute;
 	inset: 0;
@@ -242,7 +261,3 @@
 	border-radius: 12px;
 	width: 0;
 }
-.footer__progress-percent {
-}
-
-/* --------------------------------------- */

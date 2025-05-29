@@ -1,8 +1,8 @@
 const musicList = [
-	'../assets/audio/1.mp3',
-	'../assets/audio/Andery Toronto - Glock.mp3',
-	'../assets/audio/Andery Toronto feat. Archi - С Кем Ты Была.mp3',
-	'../assets/audio/Andery Toronto - Криминал.mp3'
+	"../assets/audio/1.mp3",
+	"../assets/audio/Andery Toronto - Glock.mp3",
+	"../assets/audio/Andery Toronto feat. Archi - С Кем Ты Была.mp3",
+	"../assets/audio/Andery Toronto - Криминал.mp3",
 ];
 const elements = {
 	playBtn: document.querySelector("#play-btn"),
@@ -93,14 +93,15 @@ elements.fileInput.addEventListener("change", (e) => {
 
 state.audio.addEventListener("timeupdate", updateUI.progress);
 
-
-
 // --------------------------------------------------------------
 
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load', () => {
-		navigator.serviceWorker.register('/service-worker.js')
-			.then(reg => console.log('Service Worker registered:', reg))
-			.catch(err => console.error('Service Worker registration failed:', err));
-	})
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		navigator.serviceWorker
+			.register("/service-worker.js")
+			.then((reg) => console.log("Service Worker registered:", reg))
+			.catch((err) =>
+				console.error("Service Worker registration failed:", err)
+			);
+	});
 }
